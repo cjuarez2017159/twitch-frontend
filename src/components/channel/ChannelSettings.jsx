@@ -100,7 +100,7 @@ export const ChannelSettings = ({ settings, saveSettings }) => {
     };
 
     const handleFormSubmit = (event) => {
-        event.preventeDefault()
+        event.preventDefault()
 
         saveSettings({
             username: formState.username.value,
@@ -118,7 +118,7 @@ export const ChannelSettings = ({ settings, saveSettings }) => {
                                   !formState.description.isValid
 
     return(
-        <form className="settings-form">
+        <div className="settings-form">
             {inputs.map((input) => (
                 <Input
                     key={input.field}
@@ -136,6 +136,6 @@ export const ChannelSettings = ({ settings, saveSettings }) => {
             <button onClick={handleFormSubmit} disabled={isSubmitButtonDisable}>
                 Guardar
             </button>
-        </form>
+        </div>
     )
 }

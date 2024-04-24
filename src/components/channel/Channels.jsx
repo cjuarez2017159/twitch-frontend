@@ -5,7 +5,7 @@ export const Channels = ({ channels }) => {
     const navigate = useNavigate()
 
     const handleNavigateToChannel = (id) => {
-        navigate(`/channels/${id}`)
+        navigate(`/channel/${id}`)
     }
 
     return (
